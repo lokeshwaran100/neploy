@@ -1,6 +1,6 @@
 # neploy
 
- **Improvised Code.py follow the below instructions** ( https://github.com/lokeshwaran100/neploy/blob/main/src/backend/Improvised%20Code.py)
+ **Improvised Code.py follow the below instructions** (https://github.com/lokeshwaran100/neploy/blob/main/src/backend/Improvised%20Code.py)
  
 use **TfidfVectorizer instead of CountVectorize**r. TF-IDF takes into account the importance of words in the context of the entire dataset, potentially leading to more meaningful features for classification.
 
@@ -15,7 +15,7 @@ Remember that in a real-world scenario, you'd want a much larger and more divers
 
 
 
-**ML code Optimization.py file follow below instructions** 
+**ML code Optimization.py file follow below instructions** (https://github.com/lokeshwaran100/neploy/blob/main/src/backend/ML%20code%20Optimization.py)
 
 In practice, you'll need a much larger and diverse dataset for better model performance.
 Data preprocessing can involve tokenization, removing stopwords, stemming, etc.
