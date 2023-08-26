@@ -1,36 +1,44 @@
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
 
-# Read the input text file
-with open("input.txt") as f:
-    data = f.read()
-
-# Split the data into code snippets and labels
-code_snippets = data.split("\n")
-labels = [
-    "optimize" if "optimize" in snippet else "ok" for snippet in code_snippets
+# Sample dataset containing smart contract code snippets and labels indicating improvement needs
+data = [
+    ("function transfer(address _to, uint256 _value) public returns (bool) { ... }", "optimize"),
+    ("for (uint256 i = 0; i < n; i++) { ... }", "optimize"),
+    ("mapping(address => uint256) balances;", "ok"),
+    # ... more data ...
 ]
 
-# Convert the code snippets into numerical features
-vectorizer = TfidfVectorizer(
-    tokenizer=lambda x: x.split(), stop_words=None, max_features=5000, ngram_range=(1, 2)
-)
-X = vectorizer.fit_transform(code_snippets)
+# Convert data to DataFrame
+df = pd.DataFrame(data, columns=["code", "label"])
 
-# Train a RandomForestClassifier model
-model = RandomForestClassifier(
-    n_estimators=100, max_depth=10, random_state=42, min_samples_split=2, min_samples_leaf=1
-)
-model.fit(X, labels)
+# Preprocessing: Convert code snippets into numerical features using CountVectorizer
+vectorizer = CountVectorizer(ngram_range=(1, 2))
+X = vectorizer.fit_transform(df["code"])
+y = df["label"]
 
-# Predict the suggested improvement for each code snippet
-predictions = model.predict(X)
+# Split data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Print the results
-for i, (code_snippet, prediction) in enumerate(zip(code_snippets, predictions)):
-    print(f"Code snippet {i + 1}: {code_snippet}")
-    print(f"Suggested improvement: {prediction}")
+# Train a RandomForestClassifier (you can use more advanced models as well)
+model = RandomForestClassifier()
+model.fit(X_train, y_train)
+
+# Evaluate the model
+y_pred = model.predict(X_test)
+print(classification_report(y_test, y_pred))
+
+# Read the Python smart contract script from a file
+with open("test.py", "r") as f:
+    smart_contract_code = f.read()
+
+# Get the suggested improvements for the smart contract code
+suggested_improvements = model.predict_proba(vectorizer.transform([smart_contract_code]))
+
+# Print the suggested improvements
+for i, improvement in enumerate(suggested_improvements):
+    print(f"Suggested improvement {i + 1}: {improvement}")
