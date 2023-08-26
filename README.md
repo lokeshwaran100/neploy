@@ -8,17 +8,30 @@ Save the code in a file called code_optimization_model.py.
 Open a terminal and navigate to the directory where the file is saved.
 Run the following command to run the code:
 python code_optimization_model.py
+
+This will print the classification report for the model.
+
+To deploy the model, you can use a variety of methods, such as:
+
+Saving the model to a file and loading it into a production environment.
+Using a cloud-based machine learning service, such as Google Cloud AI Platform or Amazon SageMaker.
+Building a web application that uses the model to predict code improvements.
+The best way to deploy the model will depend on your specific needs and requirements.
+
+Here are some additional things to keep in mind when running and deploying the code:
+
+The code uses the TfidfVectorizer method to convert code snippets into numerical features. This method takes into account the frequency of words and phrases in the code.
+The code uses the RandomForestClassifier method to train the model. This method is a type of ensemble learning that uses multiple decision trees to make predictions.
+The code uses the classification report metric to evaluate the model. This metric measures the accuracy, precision, recall, and f1-score of the model.
+To predict the suggested improvement for a new code snippet, you can run the following code:
+
+Python
+new_code_snippet = "uint256 totalSupply = 1000000;"
+new_code_vectorized = vectorizer.transform([new_code_snippet])
+prediction = model.predict(new_code_vectorized)[0]
+
+print(f"Suggested improvement: {prediction}")
  
-use **TfidfVectorizer instead of CountVectorize**r. TF-IDF takes into account the importance of words in the context of the entire dataset, potentially leading to more meaningful features for classification.
-
-The**tokenizer function is used with split()** to tokenize the code snippets.
-
-We've tuned **hyperparameters for the RandomForestClassifier by specifying n_estimators and max_depth for better model performance**
-The classification report provides more detailed evaluation metrics.
-
-Remember that in a real-world scenario, you'd want a much larger and more diverse dataset, and you might also consider more advanced preprocessing techniques, using different models, and potentially incorporating more features from the code.
-
-
 
 
 
