@@ -4,18 +4,19 @@
 
 Install the necessary Python libraries. You can do this using the pip install command:
 pip install numpy pandas sklearn
+
 Import the TfidfVectorizer class from the sklearn.feature_extraction.text module:
 Python
 from sklearn.feature_extraction.text import TfidfVectorizer
-Use code with caution. Learn more
+
 Create an instance of the TfidfVectorizer class and specify the parameters that you want to use. For example, you can specify the tokenizer, stop words, and max_features parameters:
 Python
 vectorizer = TfidfVectorizer(tokenizer=lambda x: x.split(), stop_words=None, max_features=5000)
-Use code with caution. Learn more
+
 Fit the TfidfVectorizer on the data. This will create a vocabulary of words and their corresponding TF-IDF scores:
 Python
 vectorizer.fit(data)
-Use code with caution. Learn more
+
 Transform the data using the TfidfVectorizer. This will convert the data into a matrix of TF-IDF scores:
 X = vectorizer.transform(data)
 You can now use the X matrix for machine learning tasks, such as classification or clustering.
