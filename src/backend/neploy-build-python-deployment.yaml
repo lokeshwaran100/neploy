@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: neploy-build-python
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: neploy-build-python
+  template:
+    metadata:
+      labels:
+        app: neploy-build-python
+    spec:
+      containers:
+        - name: build-container
+          image: localhost:5000/neploy-build-python:latest
+          ports:
+            - containerPort: 8080
+          command: ["python3", "app.py"]
