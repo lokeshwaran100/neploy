@@ -10,6 +10,7 @@ pip install numpy pandas sklearn
 Save the code in a file called code_optimization_model.py.
 
 Open a terminal and navigate to the directory where the file is saved.
+
 To run the code with an input file, you can use the following command:
 python code_optimization_model.py input.txt
 Where input.txt is the path to the input file. The file should contain one smart contract code snippet per line.
