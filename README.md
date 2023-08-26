@@ -21,3 +21,6 @@ venv\Scripts\activate.bat
 ```
 pip install -r requirements.txt 
 ```
+
+## Run test
+neo3-boa compile src/tests/test_hello_world.py
