@@ -17,4 +17,4 @@ spec:
           image: localhost:5000/neploy-build-python:latest
           ports:
             - containerPort: 8080
-          command: ["python3", "app.py"]
+          command: ["python3", "neploy-build-python.py"]

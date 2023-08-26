@@ -17,10 +17,6 @@ def build_endpoint():
 
         with open(temp_filename, 'wb') as f:
             f.write(code.encode())
-        # Save the code to a temporary .py file
-        #with tempfile.NamedTemporaryFile(suffix=".py", delete=False) as temp_file:
-        #    temp_filename = temp_file.name
-        #    temp_file.write(code.encode())
 
         # Execute the code
         try:
