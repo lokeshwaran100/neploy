@@ -24,9 +24,4 @@ Saving the model to a file and loading it into a production environment.
 Using a cloud-based machine learning service, such as Google Cloud AI Platform or Amazon SageMaker.
 Building a web application that uses the model to predict code improvements.
 
-To deploy the model, you can use a variety of methods, such as:
-
-Saving the model to a file and loading it into a production environment.
-Using a cloud-based machine learning service, such as Google Cloud AI Platform or Amazon SageMaker.
-Building a web application that uses the model to predict code improvements.
 The best way to deploy the model will depend on your specific needs and requirements.
