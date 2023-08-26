@@ -1,6 +1,13 @@
 # neploy
 
  **Improvised Code.py follow the below instructions** (https://github.com/lokeshwaran100/neploy/blob/main/src/backend/Improvised%20Code.py)
+
+Install the necessary Python libraries. You can do this using the pip install command:
+pip install numpy pandas sklearn
+Save the code in a file called code_optimization_model.py.
+Open a terminal and navigate to the directory where the file is saved.
+Run the following command to run the code:
+python code_optimization_model.py
  
 use **TfidfVectorizer instead of CountVectorize**r. TF-IDF takes into account the importance of words in the context of the entire dataset, potentially leading to more meaningful features for classification.
 
