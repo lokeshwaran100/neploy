@@ -17,6 +17,13 @@ Remember that in a real-world scenario, you'd want a much larger and more divers
 
 **ML code Optimization.py file follow below instructions** (https://github.com/lokeshwaran100/neploy/blob/main/src/backend/ML%20code%20Optimization.py)
 
+Install the necessary Python libraries. You can do this using the pip install command:
+pip install numpy pandas sklearn
+Save the code in a file called code_optimization_model.py.
+Open a terminal and navigate to the directory where the file is saved.
+Run the following command to run the code:
+python code_optimization_model.py
+
 In practice, you'll need a much larger and diverse dataset for better model performance.
 Data preprocessing can involve tokenization, removing stopwords, stemming, etc.
 Model selection and hyperparameter tuning are crucial for good results.
