@@ -1,9 +1,8 @@
 # neploy
 
  **Improvised Code.py follow the below instructions** (https://github.com/lokeshwaran100/neploy/blob/main/src/backend/Improvised%20Code.py)
-	
-how to run and deploy along with the input file
 
+	lets get started as how to run and deploy the above along with input 
 
 Install the necessary Python libraries. You can do this using the pip install command:
 pip install numpy pandas sklearn
@@ -27,14 +26,3 @@ The code uses the TfidfVectorizer method to convert code snippets into numerical
 The code uses the RandomForestClassifier method to train the model. This method is a type of ensemble learning that uses multiple decision trees to make predictions.
 The code uses the classification report metric to evaluate the model. This metric measures the accuracy, precision, recall, and f1-score of the model.
 To predict the suggested improvement for a new code snippet, you can run the following code:
-
-Python
-new_code_snippet = "uint256 totalSupply = 1000000;"
-new_code_vectorized = vectorizer.transform([new_code_snippet])
-prediction = model.predict(new_code_vectorized)[0]
-
-print(f"Suggested improvement: {prediction}")
- 
-
-
-
