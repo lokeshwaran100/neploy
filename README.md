@@ -1,6 +1,9 @@
 # neploy
 
  **Improvised Code.py follow the below instructions** (https://github.com/lokeshwaran100/neploy/blob/main/src/backend/Improvised%20Code.py)
+	
+how to run and deploy along with the input file
+
 
 Install the necessary Python libraries. You can do this using the pip install command:
 pip install numpy pandas sklearn
