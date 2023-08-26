@@ -1,0 +1,45 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.png
+*.html
+
+# Specific to IDEs
+.idea
+.idea/**/workspace.xml
+.idea/**/tasks
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+.DS_Store
+.vscode/*
+
+# Log files
+logs/*
+*.logs
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Pycharm
+docs/html/
+docs/rst/
+
+*.swp
+*.swo
+*.swn
+*.swp
+*.swo
+
+# neo
+*.manifest.json
+*.nef
