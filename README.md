@@ -44,8 +44,10 @@ Remember that in a real-world scenario, you'd want a much larger and more divers
 
 Install the necessary Python libraries. You can do this using the pip install command:
 pip install numpy pandas sklearn
+
 Save the code in a file called code_optimization_model.py.
 Open a terminal and navigate to the directory where the file is saved.
+
 Run the following command to run the code:
 python code_optimization_model.py
 
