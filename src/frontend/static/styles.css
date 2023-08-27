@@ -128,3 +128,12 @@ body.dark-mode {
 .sidebar-button span {
   margin-top: 5px; 
 }
+
+.sidebar-button span {
+  display: none;
+}
+
+
+.sidebar-button:hover span {
+  display: inline;
+}
