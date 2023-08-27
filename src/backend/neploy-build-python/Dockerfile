@@ -7,7 +7,7 @@ RUN apt update
 RUN apt-get install -y python3 python3-pip
 
 # install required python packages
-RUN pip3 install neo3-boa==1.0.0 flask sklearn numpy pandas
+RUN pip3 install neo3-boa==1.0.0 flask scikit-learn numpy pandas
 
 # copy flask script to container
 COPY neploy-build-python.py .

@@ -59,6 +59,7 @@ def optimise_endpoint():
         # optimise the code
         try:
             result = subprocess.run(["python3", "ml-code-optimiser.py", temp_filename], capture_output=True, text=True)
+            #result = subprocess.run(["pip3", "show", "sklearn"], capture_output=True, text=True)
             os.remove(temp_filename)  # Delete the temporary file
 
             response_data = {
