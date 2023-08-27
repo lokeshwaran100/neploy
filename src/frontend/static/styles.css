@@ -80,13 +80,20 @@ body {
   color: white;
 }
 
-.output-area {
+/* .output-area {
   background-color: #1e1e1e; 
   padding: 20px;
   border-top: 1px solid #ccc;
   height: 200px;
+} */
+.output-area {
+  background-color: #1e1e1e; 
+  padding: 20px;
+  border-top: 1px solid #ccc;
+  min-height: 200px;
+  max-height: 70vh; 
+  overflow: auto; 
 }
-
 .output-area h2 {
   margin-bottom: 10px;
 }
