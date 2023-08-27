@@ -38,21 +38,18 @@ print(classification_report(y_test, y_pred))
 with open("test.py", "r") as f:
   code = f.read()
 
-# Predict the improvement suggestions for the code
-new_code_vectorized = vectorizer.transform([code])
-prediction = model.predict(new_code_vectorized)[0]
+# Split the code into lines
+lines = code.split("\n")
 
-# Print the improvement suggestions
-if prediction == "optimize":
-  print("The code needs to be optimized.")
+# Predict the improvement suggestions for each line of code
+for line in lines:
+  new_code_vectorized = vectorizer.transform([line])
+  prediction = model.predict(new_code_vectorized)[0]
 
-  # Get the top 3 suggestions
-  top_3_suggestions = model.predict_proba(new_code_vectorized).argsort()[-3:][::-1]
-
-  # Print the suggestions
-  for index in top_3_suggestions:
-    snippet, probability = model.predict_proba(new_code_vectorized)[0][index]
-    print(f"{index + 1}: {snippet} ({probability * 100:.2f}%)")
-else:
-  print("The code is fine.")
-
+  # Print the improvement suggestions
+  if prediction == "optimize":
+    print("The following are the suggested optimization snippets for line {}:".format(line))
+    for snippet in model.predict_proba(new_code_vectorized)[0]:
+      print(snippet)
+  else:
+    print("The code in line {} is fine.".format(line))
