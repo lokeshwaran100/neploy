@@ -2,7 +2,7 @@
 # Neploy
 
 ### Simplifying Neo3 Smart Contract Deployment and Testing
-Welcome to the official repository of **Neploy**, a  path breaking innovative project submitted under the Infrastructure and Tooling category for the 2023 NEO APAC Hackathon. Neploy aims to revolutionize the process of compiling, reviewing, testing, and deploying NEO smart contracts written in Python (Using [neo3-boa](https://github.com/CityOfZion/neo3-boa) package), all while eliminating the complexities of setting up the development environment with NEO blockchain toolkits.
+Welcome to the official repository of **Neploy**, a  pathbreaking innovative project submitted under the Infrastructure and Tooling category for the 2023 NEO APAC Hackathon. Neploy aims to revolutionize the process of compiling, reviewing, testing, and deploying NEO smart contracts written in Python (Using [neo3-boa](https://github.com/CityOfZion/neo3-boa) package), all while eliminating the complexities of setting up the development environment with NEO blockchain toolkits.
 
 ## Table of Contents
 
