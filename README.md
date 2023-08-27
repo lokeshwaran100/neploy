@@ -1,27 +1,75 @@
-# neploy
+# Neploy: Simplifying Neo3 Smart Contract Deployment and Testing
 
- **Improvised Code.py follow the below instructions** (https://github.com/lokeshwaran100/neploy/blob/main/src/backend/Improvised%20Code.py)
- 
- lets get started as how to run and deploy the above along with input 
+![Neploy Banner](neploy_banner.png)
 
-Install the necessary Python libraries. You can do this using the pip install command:
-pip install numpy pandas sklearn
+Welcome to the official repository of **Neploy**, a groundbreaking project submitted under the Infrastructure and Tooling category for the Neo3 Blockchain Hackathon. Neploy aims to revolutionize the process of deploying, testing, and reviewing Neo smart contracts written in Python, all while eliminating the complexities of setting up the development environment with Neo blockchain toolkits.
 
-Save the code in a file called code_optimization_model.py.
-Create a file called input.txt and add the code snippets that you want to analyze. Each code snippet should be on a separate line.
-Open a terminal and navigate to the directory where the code and input file are saved.
-Run the following command to train the model:
-python code_optimization_model.py
-This will print the classification report for the model.
+## Table of Contents
 
-To predict the suggested improvement for each code snippet, run the following command:
-python code_optimization_model.py input.txt
-This will print the results for each code snippet.
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Technology Stack](#technology-stack)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [AI-Powered Code Review](#ai-powered-code-review)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 
-To deploy the model, you can use a variety of methods, such as:
+## Project Overview
 
-Saving the model to a file and loading it into a production environment.
-Using a cloud-based machine learning service, such as Google Cloud AI Platform or Amazon SageMaker.
-Building a web application that uses the model to predict code improvements.
+Neploy addresses the common challenges faced by developers when it comes to working with Neo smart contracts. Compiling, deploying, and testing these contracts manually can be time-consuming and error-prone. Neploy simplifies this process by providing an intuitive web portal that interacts with a Kubernetes-based backend to streamline the entire workflow.
 
-The best way to deploy the model will depend on your specific needs and requirements.
+## Features
+
+- **User-Friendly Portal:** Neploy offers a user-friendly web portal that allows developers to effortlessly deploy their Neo smart contracts without the need for intricate setup steps.
+
+- **Automated Compilation:** The smart contract deployment process includes automated compilation, ensuring that the code is error-free before being sent to the blockchain.
+
+- **Effortless Testing:** Developers can easily test their smart contracts within the Neploy environment, enabling rapid iteration and bug detection.
+
+- **AI-Powered Code Review:** Neploy leverages AI and machine learning to provide code optimization suggestions, enhancing the quality and efficiency of the smart contracts.
+
+## Technology Stack
+
+- **Backend:** Kubernetes is utilized to containerize the backend, ensuring scalability and efficient resource management. Machine Learning based in Python for code optimization.
+
+- **Frontend:** The frontend is developed using JavaScript, providing a seamless interface for users to interact with the backend's exposed endpoints.
+
+## Getting Started
+
+Follow these steps to get started with Neploy:
+
+1. Clone the repository: `git clone https://github.com/lokeshwaran100/neploy.git`
+2. Navigate to the project directory: `cd neploy`
+3. Set up the Kubernetes environment for the backend.
+4. Launch the frontend application by opening the `http://127.0.0.1:8080` file in your preferred web browser.
+
+## Usage
+
+1. Access the Neploy web portal.
+2. Upload your Python-based Neo smart contract.
+3. Configure deployment parameters.
+4. Initiate the deployment process.
+5. Monitor the compilation and deployment progress.
+6. Interact with the deployed contract on the Neo blockchain.
+
+## AI-Powered Code Review
+
+Neploy incorporates advanced AI and machine learning algorithms to perform code reviews on submitted smart contracts. This feature provides optimization suggestions, enabling developers to enhance their contracts for improved performance and efficiency.
+
+## Contributing
+
+Contributions are welcomed and encouraged! If you'd like to contribute to Neploy, please review our [Contribution Guidelines](CONTRIBUTING.md).
+
+## License
+
+Neploy is released under the [MIT License](LICENSE).
+
+## Contact
+
+Have questions or want to know more about Neploy? Feel free to reach out to us at neploy.support@example.com or join our community on [Discord](https://discord.gg/neploy). We'd love to hear from you!
+
+---
+
+*Disclaimer: This project was created for the Neo3 Blockchain Hackathon and is not affiliated with the official Neo project.*
