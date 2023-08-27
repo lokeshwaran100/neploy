@@ -32,7 +32,7 @@ Neploy addresses the common challenges faced by developers when it comes to work
 
 ## Technology Stack
 
-- **Backend:** Kubernetes is utilized to containerize the backend, ensuring scalability and efficient resource management.
+- **Backend:** Kubernetes is utilized to containerize the backend, ensuring scalability and efficient resource management. Machine Learning based in Python for code optimization.
 
 - **Frontend:** The frontend is developed using JavaScript, providing a seamless interface for users to interact with the backend's exposed endpoints.
 
