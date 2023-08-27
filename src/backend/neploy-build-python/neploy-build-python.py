@@ -50,7 +50,8 @@ def optimise_endpoint():
             return jsonify({"error": "Invalid request data"}), 400
 
         code = data["code"]
-        temp_filename = data["file"]
+        #temp_filename = data["file"]
+        temp_filename = "test.py"
 
         with open(temp_filename, 'wb') as f:
             f.write(code.encode())

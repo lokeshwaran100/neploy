@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report
 
@@ -16,25 +16,29 @@ data = [
 # Convert data to DataFrame
 df = pd.DataFrame(data, columns=["code", "label"])
 
-# Preprocessing: Convert code snippets into numerical features using TF-IDF vectorization
-vectorizer = TfidfVectorizer(tokenizer=lambda x: x.split(), stop_words=None, max_features=5000)
+# Preprocessing: Convert code snippets into numerical features using CountVectorizer
+vectorizer = CountVectorizer(ngram_range=(1, 2))
 X = vectorizer.fit_transform(df["code"])
 y = df["label"]
 
 # Split data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-# Train a RandomForestClassifier with tuned hyperparameters
-model = RandomForestClassifier(n_estimators=100, max_depth=10, random_state=42)
+# Train a RandomForestClassifier (you can use more advanced models as well)
+model = RandomForestClassifier()
 model.fit(X_train, y_train)
 
 # Evaluate the model
 y_pred = model.predict(X_test)
-print("Classification Report:\n", classification_report(y_test, y_pred))
+print(classification_report(y_test, y_pred))
 
-# New code snippet to predict improvement suggestion
-new_code_snippet = "uint256 totalSupply = 1000000;"
-new_code_vectorized = vectorizer.transform([new_code_snippet])
-prediction = model.predict(new_code_vectorized)[0]
+# Read the Python smart contract script from a file
+with open("test.py", "r") as f:
+    smart_contract_code = f.read()
 
-print(f"Suggested improvement: {prediction}")
+# Get the suggested improvements for the smart contract code
+suggested_improvements = model.predict_proba(vectorizer.transform([smart_contract_code]))
+
+# Print the suggested improvements
+for i, improvement in enumerate(suggested_improvements):
+    print(f"Suggested improvement {i + 1}: {improvement}")
