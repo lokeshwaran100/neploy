@@ -1,4 +1,4 @@
-# comment # This code first reads the Python smart contract script from a file. Then, it uses the model to predict the suggested improvements for the smart contract code. Finally, it prints the suggested improvements
+# This code first reads the Python smart contract script from a file. Then, it uses the model to predict the suggested improvements for the smart contract code. Finally, it prints the suggested improvements
 
 import numpy as np
 import pandas as pd
@@ -45,10 +45,14 @@ prediction = model.predict(new_code_vectorized)[0]
 # Print the improvement suggestions
 if prediction == "optimize":
   print("The code needs to be optimized.")
-  print("Suggested improvements:")
-  for suggestion in model.predict_proba(new_code_vectorized)[0]:
-    print(f"* {suggestion}")
+
+  # Get the top 3 suggestions
+  top_3_suggestions = model.predict_proba(new_code_vectorized).argsort()[-3:][::-1]
+
+  # Print the suggestions
+  for index in top_3_suggestions:
+    snippet, probability = model.predict_proba(new_code_vectorized)[0][index]
+    print(f"{index + 1}: {snippet} ({probability * 100:.2f}%)")
 else:
   print("The code is fine.")
-
 
