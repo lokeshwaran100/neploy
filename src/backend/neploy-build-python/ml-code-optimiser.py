@@ -1,4 +1,4 @@
-# This code first reads the Python smart contract script from a file. Then, it uses the model to predict the suggested improvements for the smart contract code. Finally, it prints the suggested improvements
+# comment # This code first reads the Python smart contract script from a file. Then, it uses the model to predict the suggested improvements for the smart contract code. Finally, it prints the suggested improvements
 
 import numpy as np
 import pandas as pd
