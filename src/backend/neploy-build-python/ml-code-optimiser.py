@@ -1,5 +1,3 @@
-# This code first reads the Python smart contract script from a file. Then, it uses the model to predict the suggested improvements for the smart contract code. Finally, it prints the suggested improvements
-
 import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -42,14 +40,14 @@ with open("test.py", "r") as f:
 lines = code.split("\n")
 
 # Predict the improvement suggestions for each line of code
-for line in lines:
+for i, line in enumerate(lines):
   new_code_vectorized = vectorizer.transform([line])
   prediction = model.predict(new_code_vectorized)[0]
 
   # Print the improvement suggestions
   if prediction == "optimize":
-    print("The following are the suggested optimization snippets for line {}:".format(line))
+    print("Line {}: The following are the suggested optimization snippets:".format(i + 1))
     for snippet in model.predict_proba(new_code_vectorized)[0]:
       print(snippet)
   else:
-    print("The code in line {} is fine.".format(line))
+    print("Line {}: The code is fine.".format(i + 1))
