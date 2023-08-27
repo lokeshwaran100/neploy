@@ -68,11 +68,11 @@ def optimise_endpoint():
             }
 
             if result.returncode != 0:
-                response_data["message"] = "Failed to optimise code"
+                response_data["message"] = "Failed to review code"
             elif 'ERROR' in result.stderr:
-                response_data["message"] = "Failed to optimise code"
+                response_data["message"] = "Failed to review code"
             else:
-                response_data["message"] = "Code is optmized successfully"
+                response_data["message"] = "Code is reviewed successfully"
             return jsonify(response_data), 200
         except Exception as e:
             os.remove(temp_filename)  # Delete the temporary file

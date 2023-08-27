@@ -30,7 +30,7 @@ model.fit(X_train, y_train)
 
 # Evaluate the model
 y_pred = model.predict(X_test)
-print(classification_report(y_test, y_pred))
+#print(classification_report(y_test, y_pred))
 
 # Read the file containing the Python smart contract script
 with open("test.py", "r") as f:
@@ -45,9 +45,12 @@ for i, line in enumerate(lines):
   prediction = model.predict(new_code_vectorized)[0]
 
   # Print the improvement suggestions
+  if not lines[i]:
+    print("{}".format(lines[i]))
+    continue
   if prediction == "optimize":
-    print("Line {}: The following are the suggested optimization snippets:".format(i + 1))
-    for snippet in model.predict_proba(new_code_vectorized)[0]:
-      print(snippet)
+    print("[optimised]: {}".format(lines[i]))
+    #for snippet in model.predict_proba(new_code_vectorized)[0]:
+    #  print(snippet)
   else:
-    print("Line {}: The code is fine.".format(i + 1))
+    print("[    ok   ]: {}".format(lines[i]))
