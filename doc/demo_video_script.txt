@@ -1,0 +1,39 @@
+[Opening Shot: Introduce Yourself]
+"Hello everyone! We are team Neploy, and we're excited to present to you an innovative project called Neploy, which aims to revolutionize the way we compile, deploy and test NEO smart contracts in every walk of developer workflow."
+
+[Display Neploy Banner]
+"Let's dive right in!"
+
+[Showcasing the Problem]
+"We all know that compiling and testing smart contracts can be a complex and time-consuming process. Manually setting up the development environment, compiling code, and ensuring it's error-free can be a daunting task."
+
+[Introducing Neploy's Solution]
+"That's where Neploy comes in. With Neploy, we've developed an intuitive web portal that interacts with a Kubernetes-based backend to streamline the entire workflow."
+
+[Walkthrough of Key Features]
+"Here are some of the key features that make Neploy stand out:"
+
+"First, we have a web portal. No more intricate setup steps to compile, test and deploy smart contracts."
+
+"Next, automated compilation. Neploy ensures your code is error-free before it's sent to the blockchain."
+
+"But that's not all! We've integrated AI/ML for code review. Neploy provides code optimization suggestions, enhancing the quality and efficiency of your smart contracts."
+
+[Live Demo]
+"Let's see Neploy in action."
+
+[Switch to Screen Recording: Using Neploy]
+"As you can see, we are in the Neploy web portal. We've written a NEO smart contract in Python using the neo3-boa package."
+
+"We'll start by compiling the code by clicking the compile button and we can view the compiled output of the code. (If error code). Neploy automates the compilation process, ensuring the code is error-free."
+
+"Next, we'll submit the code for AI/ML code review by clicking the Review Code button. Neploy's AI algorithms analyze the code and provide optimization suggestions to enhance performance."
+
+[Switch back to You]
+"And there you have it! With Neploy, the entire process - from writing code to compiling, and reviewing - is seamless and efficient."
+
+[Highlight Benefits]
+"Imagine the time saved, the errors prevented, and the enhanced quality of your smart contracts."
+
+[Closing Shot]
+"In this POC, the application only supports compiling and AI/ML code review feature and the application can be extended to support other features including deploying, testing, co-pilot etc"
