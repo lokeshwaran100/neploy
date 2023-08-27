@@ -51,4 +51,4 @@ frontend/
 ## Usage
 1. Write your code in the code editor area.
 2. Click the "Compile" button to compile your code and view the output.
-3. Click the "Optimizer" button to review your code and see the optimized result.
+3. Click the "Review Code" button to get AI/ML code review result.
