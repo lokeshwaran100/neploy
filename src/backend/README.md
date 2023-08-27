@@ -10,7 +10,7 @@ Before you proceed with setting up the backend for Neploy, please ensure that yo
 
 1. Navigate to the backend src files directory:
 ```bash
-cd neploy-build-python
+cd backend/neploy-build-python
 ```
 2. Build the Docker image using the provided Dockerfile:
 ```bash
