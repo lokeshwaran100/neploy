@@ -6,7 +6,7 @@ Before you proceed with setting up the backend for Neploy, please ensure that yo
 3. **Docker:** You should have Docker installed on your local machine to build and push Docker images. You can download and install Docker from the [official Docker website](https://www.docker.com/get-started).
 4. **Container Registry:** You'll need access to a container registry to push your Docker images. Popular options include [Docker Hub](https://hub.docker.com/), [Google Container Registry](https://cloud.google.com/container-registry), and [Amazon Elastic Container Registry (ECR)](https://aws.amazon.com/ecr/).
 
-To deploy the backend for Neploy on a Kubernetes cluster, follow these steps:
+## To deploy the backend for Neploy on a Kubernetes cluster, follow these steps:
 
 1. Navigate to the backend src files directory:
 ```bash
